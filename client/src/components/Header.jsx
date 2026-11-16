@@ -121,6 +121,15 @@ function MobileMenu({ open, onClose }) {
             {l.label}
           </Link>
         ))}
+        {/* The header's account icon is hidden on phones, so sign-in lives here */}
+        <Link
+          to="/admin"
+          onClick={onClose}
+          className="mt-4 self-start inline-flex items-center gap-2.5 min-h-12 px-5 rounded-full border-[1.5px] border-ink text-ink text-[16px] font-bold no-underline"
+        >
+          <AccountIcon />
+          Sign in
+        </Link>
       </nav>
       <div className="container-shop mt-auto pb-8 flex flex-col gap-1 text-[15px] text-muted">
         <span>Same-day delivery in Accra</span>
