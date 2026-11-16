@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Oud Noir eau de parfum, Sika Beauty</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Gloock&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+</style>
+</helmet>
+<div style="font-family: 'Manrope', 'Helvetica Neue', Arial, sans-serif; background: #FBF6F2; color: #24150F; font-size: 16px; line-height: 1.55; min-height: 2100px;">
+
+<header style="border-bottom: 1px solid #E6D6CC;">
+<div style="max-width: 1320px; margin: 0 auto; padding: 0 clamp(16px, 4vw, 40px); min-height: 80px; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;">
+<a href="Main.dc.html" style="font-family: 'Gloock', Georgia, serif; font-size: 32px; color: #24150F; text-decoration: none;">Sika<span style="color: #A3473A;">.</span></a>
+<nav aria-label="Main" style="display: flex; flex-wrap: wrap; gap: 6px 30px; font-size: 15px; font-weight: 600;">
+<a href="Main.dc.html" style="color: #24150F; text-decoration: none;">Shop all</a>
+<a href="Main.dc.html" style="color: #24150F; text-decoration: none;">Perfumes</a>
+<a href="Main.dc.html" style="color: #24150F; text-decoration: none;">Body creams</a>
+<a href="Main.dc.html" style="color: #24150F; text-decoration: none;">Gift sets</a>
+</nav>
+<a href="Main.dc.html" aria-label="Bag, {{cart}} items" style="display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; background: #24150F; color: #FBF6F2; text-decoration: none; font-size: 14px; font-weight: 700; border-radius: 999px;">
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 12H6L5 8z"></path><path d="M9 8V6a3 3 0 0 1 6 0v2"></path></svg>Bag ({{cart}})</a>
+</div>
+</header>
+
+<div style="max-width: 1320px; margin: 0 auto; padding: 24px clamp(16px, 4vw, 40px) 0;">
+<nav aria-label="Breadcrumb" style="display: flex; flex-wrap: wrap; gap: 8px; font-size: 14px; color: #6E5A50;">
+<a href="Main.dc.html" style="color: #6E5A50;">Home</a><span aria-hidden="true">/</span><a href="Main.dc.html" style="color: #6E5A50;">Perfumes</a><span aria-hidden="true">/</span><span style="color: #24150F; font-weight: 600;">Oud Noir</span>
+</nav>
+</div>
+
+<section style="max-width: 1320px; margin: 0 auto; padding: 24px clamp(16px, 4vw, 40px) 0; display: flex; flex-wrap: wrap; gap: 56px; align-items: flex-start;">
+
+<div style="flex: 1 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 14px;">
+<div role="img" aria-label="Product photo placeholder: {{photo.label}}" style="position: relative; aspect-ratio: 1 / 1; border-radius: 28px; background: {{photo.tint}}; display: flex; align-items: flex-end; justify-content: center; padding: 24px; box-sizing: border-box;">
+<span style="position: absolute; top: 18px; left: 18px; padding: 7px 14px; background: #A3473A; color: #FFFFFF; font-size: 13px; font-weight: 800; border-radius: 999px;">Save GH₵ 200</span>
+<span style="font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: #6E5248;">{{photo.label}}</span>
+</div>
+<div style="display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px;">
+<sc-for list="{{thumbs}}" as="t" hint-placeholder-count="4">
+<sc-if value="{{t.on}}" hint-placeholder-val="{{ false }}">
+<button type="button" aria-label="Show {{t.label}}" aria-pressed="true" onClick="{{t.pick}}" style="aspect-ratio: 1 / 1; cursor: pointer; border-radius: 16px; background: {{t.tint}}; border: 2px solid #24150F;"></button>
+</sc-if>
+<sc-if value="{{t.off}}" hint-placeholder-val="{{ true }}">
+<button type="button" aria-label="Show {{t.label}}" aria-pressed="false" onClick="{{t.pick}}" style="aspect-ratio: 1 / 1; cursor: pointer; border-radius: 16px; background: {{t.tint}}; border: 2px solid transparent;"></button>
+</sc-if>
+</sc-for>
+</div>
+</div>
+
+<div style="flex: 1 1 440px; min-width: 0; display: flex; flex-direction: column; gap: 26px;">
+<div style="display: flex; flex-direction: column; gap: 10px;">
+<span style="font-size: 14px; font-weight: 700; color: #A3473A;">Eau de parfum · Unisex</span>
+<h1 style="margin: 0; font-family: 'Gloock', Georgia, serif; font-weight: 400; font-size: clamp(44px, 4.6vw, 68px); line-height: 1; letter-spacing: -0.02em;">Oud Noir</h1>
+<p style="margin: 0; font-size: 18px; color: #5E4A40; max-width: 44ch;">Smoky oud and saffron over warm amber. Strong, close and made for evenings out.</p>
+</div>
+
+<div style="display: flex; align-items: baseline; gap: 14px;">
+<span style="font-family: 'Gloock', Georgia, serif; font-size: 40px; line-height: 1;">{{priceLabel}}</span>
+<sc-if value="{{showWas}}" hint-placeholder-val="{{ true }}"><s style="font-size: 18px; color: #8A746A;">GH₵ 1,050</s></sc-if>
+</div>
+
+<div style="display: flex; flex-direction: column; gap: 10px;">
+<span style="font-size: 14px; font-weight: 800;">Size</span>
+<div role="group" aria-label="Size" style="display: flex; flex-wrap: wrap; gap: 10px;">
+<sc-for list="{{sizes}}" as="s" hint-placeholder-count="2">
+<sc-if value="{{s.on}}" hint-placeholder-val="{{ false }}">
+<button type="button" aria-pressed="true" onClick="{{s.pick}}" style="min-height: 56px; min-width: 132px; padding: 8px 20px; cursor: pointer; font-family: inherit; display: flex; flex-direction: column; align-items: flex-start; color: #FBF6F2; background: #24150F; border: 1.5px solid #24150F; border-radius: 16px;"><span style="font-weight: 800;">{{s.label}}</span><span style="font-size: 13px; color: #CDB8AC;">{{s.price}}</span></button>
+</sc-if>
+<sc-if value="{{s.off}}" hint-placeholder-val="{{ true }}">
+<button type="button" aria-pressed="false" onClick="{{s.pick}}" style="min-height: 56px; min-width: 132px; padding: 8px 20px; cursor: pointer; font-family: inherit; display: flex; flex-direction: column; align-items: flex-start; color: #24150F; background: #FFFFFF; border: 1.5px solid #D9C5B9; border-radius: 16px;"><span style="font-weight: 800;">{{s.label}}</span><span style="font-size: 13px; color: #6E5A50;">{{s.price}}</span></button>
+</sc-if>
+</sc-for>
+</div>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 12px;">
+<div role="group" aria-label="Quantity" style="display: flex; align-items: center; border: 1.5px solid #24150F; border-radius: 999px; min-height: 56px;">
+<button type="button" aria-label="Decrease quantity" onClick="{{dec}}" style="width: 52px; height: 52px; cursor: pointer; background: transparent; border: 0; font-size: 22px; color: #24150F; font-family: inherit;">−</button>
+<span aria-live="polite" style="min-width: 28px; text-align: center; font-weight: 800;">{{qty}}</span>
+<button type="button" aria-label="Increase quantity" onClick="{{inc}}" style="width: 52px; height: 52px; cursor: pointer; background: transparent; border: 0; font-size: 22px; color: #24150F; font-family: inherit;">+</button>
+</div>
+<button type="button" onClick="{{add}}" style="flex: 1 1 220px; min-height: 56px; cursor: pointer; font-family: inherit; font-size: 16px; font-weight: 800; color: #FBF6F2; background: #24150F; border: 0; border-radius: 999px;">Add to bag · {{lineTotal}}</button>
+</div>
+<sc-if value="{{added}}" hint-placeholder-val="{{ false }}">
+<p role="status" style="margin: -12px 0 0; display: flex; align-items: center; gap: 8px; font-size: 14px; font-weight: 700; color: #2F6B3F;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"></path></svg>Added to your bag.</p>
+</sc-if>
+<a href="https://wa.me/" style="display: inline-flex; align-items: center; justify-content: center; gap: 10px; min-height: 56px; border: 1.5px solid #24150F; color: #24150F; text-decoration: none; font-weight: 800; border-radius: 999px;">
+<svg aria-hidden="true" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20l1.3-4A8 8 0 1 1 8 18.7z"></path></svg>Order on WhatsApp instead</a>
+
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr)); gap: 10px;">
+<div style="padding: 16px; background: #FFFFFF; border-radius: 16px; display: flex; flex-direction: column; gap: 2px;"><span style="font-weight: 800; font-size: 14px;">Delivery in Accra</span><span style="font-size: 14px; color: #6E5A50;">Today if you order before [CUT-OFF TIME]</span></div>
+<div style="padding: 16px; background: #FFFFFF; border-radius: 16px; display: flex; flex-direction: column; gap: 2px;"><span style="font-weight: 800; font-size: 14px;">Pay your way</span><span style="font-size: 14px; color: #6E5A50;">MoMo or card, secured by Paystack</span></div>
+</div>
+
+<div style="display: flex; flex-direction: column; border-top: 1px solid #E6D6CC;">
+<sc-for list="{{panels}}" as="pn" hint-placeholder-count="3">
+<div style="border-bottom: 1px solid #E6D6CC;">
+<button type="button" aria-expanded="{{pn.open}}" onClick="{{pn.toggle}}" style="width: 100%; min-height: 60px; display: flex; justify-content: space-between; align-items: center; cursor: pointer; background: transparent; border: 0; padding: 0; font-family: inherit; font-size: 16px; font-weight: 800; color: #24150F; text-align: left;">{{pn.title}}<span aria-hidden="true" style="font-size: 22px; font-weight: 400;">{{pn.sign}}</span></button>
+<sc-if value="{{pn.open}}" hint-placeholder-val="{{ false }}">
+<p style="margin: 0 0 20px; color: #5E4A40; white-space: pre-line;">{{pn.body}}</p>
+</sc-if>
+</div>
+</sc-for>
+</div>
+</div>
+</section>
+
+<section aria-labelledby="pair-h" style="max-width: 1320px; margin: 0 auto; padding: 96px clamp(16px, 4vw, 40px); display: flex; flex-direction: column; gap: 28px;">
+<h2 id="pair-h" style="margin: 0; font-family: 'Gloock', Georgia, serif; font-weight: 400; font-size: clamp(32px, 3.4vw, 48px); line-height: 1.05;">Make it last longer</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(min(260px, 100%), 1fr)); gap: 20px;">
+<article style="display: flex; gap: 16px; align-items: center; padding: 14px; background: #FFFFFF; border-radius: 22px;">
+<div role="img" aria-label="Product photo placeholder" style="flex: 0 0 96px; height: 112px; border-radius: 16px; background: #EFE3D0;"></div>
+<div style="flex: 1; display: flex; flex-direction: column; gap: 4px;"><span style="font-size: 13px; color: #6E5A50;">Body butter</span><span style="font-weight: 700;">Shea and Vanilla, 250ml</span><span style="font-weight: 800;">GH₵ 180</span></div>
+<button type="button" aria-label="Add Shea and Vanilla body butter to bag" onClick="{{addOne}}" style="flex: 0 0 44px; height: 44px; cursor: pointer; border-radius: 999px; background: #24150F; color: #FBF6F2; border: 0; font-size: 22px; font-family: inherit;">+</button>
+</article>
+<article style="display: flex; gap: 16px; align-items: center; padding: 14px; background: #FFFFFF; border-radius: 22px;">
+<div role="img" aria-label="Product photo placeholder" style="flex: 0 0 96px; height: 112px; border-radius: 16px; background: #E4E6D9;"></div>
+<div style="flex: 1; display: flex; flex-direction: column; gap: 4px;"><span style="font-size: 13px; color: #6E5A50;">Body oil</span><span style="font-weight: 700;">Cocoa Glow, 100ml</span><span style="font-weight: 800;">GH₵ 220</span></div>
+<button type="button" aria-label="Add Cocoa Glow body oil to bag" onClick="{{addOne}}" style="flex: 0 0 44px; height: 44px; cursor: pointer; border-radius: 999px; background: #24150F; color: #FBF6F2; border: 0; font-size: 22px; font-family: inherit;">+</button>
+</article>
+<article style="display: flex; gap: 16px; align-items: center; padding: 14px; background: #FFFFFF; border-radius: 22px;">
+<div role="img" aria-label="Product photo placeholder" style="flex: 0 0 96px; height: 112px; border-radius: 16px; background: #F3DCD3;"></div>
+<div style="flex: 1; display: flex; flex-direction: column; gap: 4px;"><span style="font-size: 13px; color: #6E5A50;">Body mist</span><span style="font-weight: 700;">Amber Musk, 200ml</span><span style="font-weight: 800;">GH₵ 150</span></div>
+<button type="button" aria-label="Add Amber Musk body mist to bag" onClick="{{addOne}}" style="flex: 0 0 44px; height: 44px; cursor: pointer; border-radius: 999px; background: #24150F; color: #FBF6F2; border: 0; font-size: 22px; font-family: inherit;">+</button>
+</article>
+</div>
+</section>
+
+<footer style="background: #24150F; color: #CDB8AC;">
+<div style="max-width: 1320px; margin: 0 auto; padding: 32px clamp(16px, 4vw, 40px); display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px; font-size: 13px;"><span><span style="font-family: 'Gloock', Georgia, serif; font-size: 22px; color: #FBF6F2;">Sika.</span></span><span>© 2026 Sika Beauty, Accra · Site by [Your studio]</span></div>
+</footer>
+
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":2100}}'>
+class Component extends DCLogic {
+constructor(props) {
+super(props);
+this.state = { size: '100', qty: 1, cart: 0, added: false, photo: 0, open: 'notes' };
+}
+renderVals() {
+var self = this;
+var s = this.state;
+var fmt = function (n) { return 'GH₵ ' + n.toLocaleString('en-US'); };
+var sizeData = [{ id: '50', label: '50ml', price: 520 }, { id: '100', label: '100ml', price: 850 }];
+var sel = sizeData.filter(function (x) { return x.id === s.size; })[0];
+var sizes = sizeData.map(function (x) {
+return { label: x.label, price: fmt(x.price), on: s.size === x.id, off: s.size !== x.id, pick: function () { self.setState({ size: x.id, added: false }); } };
+});
+var photoData = [{ label: 'Bottle, front', tint: '#E9CDBF' }, { label: 'Bottle in hand', tint: '#EFE3D0' }, { label: 'Box and bottle', tint: '#EADBE3' }, { label: 'Scent notes flat lay', tint: '#E4E6D9' }];
+var thumbs = photoData.map(function (p, i) {
+return { label: p.label, tint: p.tint, on: s.photo === i, off: s.photo !== i, pick: function () { self.setState({ photo: i }); } };
+});
+var panelData = [
+{ id: 'notes', title: 'Scent notes', body: 'Top: bergamot, saffron\nHeart: rose, oud\nBase: amber, vanilla, musk' },
+{ id: 'use', title: 'How to wear it', body: 'Apply body cream first. Spray on wrists, neck and behind the ears. Do not rub.' },
+{ id: 'delivery', title: 'Delivery and returns', body: '[Your delivery fees and areas]\nUnopened, sealed items can be returned within [X] days.' }
+];
+var panels = panelData.map(function (p) {
+var isOpen = s.open === p.id;
+return { title: p.title, body: p.body, open: isOpen, sign: isOpen ? '−' : '+', toggle: function () { self.setState({ open: isOpen ? '' : p.id }); } };
+});
+return {
+sizes: sizes, thumbs: thumbs, panels: panels, photo: photoData[s.photo],
+priceLabel: fmt(sel.price), showWas: s.size === '100',
+qty: s.qty, lineTotal: fmt(sel.price * s.qty), cart: s.cart, added: s.added,
+inc: function () { self.setState({ qty: Math.min(s.qty + 1, 10), added: false }); },
+dec: function () { self.setState({ qty: Math.max(s.qty - 1, 1), added: false }); },
+add: function () { self.setState({ cart: s.cart + s.qty, added: true }); },
+addOne: function () { self.setState({ cart: s.cart + 1 }); }
+};
+}
+}
+</script>
+</body>
+</html>

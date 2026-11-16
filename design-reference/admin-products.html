@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sika admin, products</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Gloock&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+input::placeholder{color:#8A746A}
+</style>
+</helmet>
+<div style="font-family: 'Manrope', 'Helvetica Neue', Arial, sans-serif; background: #F6EFEA; color: #24150F; font-size: 15px; line-height: 1.5; min-height: 1100px; display: flex; flex-wrap: wrap;">
+
+<aside style="flex: 1 1 240px; max-width: 280px; background: #24150F; color: #FBF6F2; padding: 28px 20px; box-sizing: border-box; display: flex; flex-direction: column; gap: 32px;">
+<div style="display: flex; align-items: baseline; gap: 10px; padding: 0 12px;"><span style="font-family: 'Gloock', Georgia, serif; font-size: 30px;">Sika<span style="color: #E7B9A9;">.</span></span><span style="font-size: 12px; font-weight: 700; color: #CDB8AC;">Admin</span></div>
+<nav aria-label="Admin" style="display: flex; flex-direction: column; gap: 4px; font-weight: 600;">
+<a href="#" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 12px; color: #CDB8AC; text-decoration: none;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"></rect><rect x="14" y="3" width="7" height="5" rx="1.5"></rect><rect x="14" y="12" width="7" height="9" rx="1.5"></rect><rect x="3" y="16" width="7" height="5" rx="1.5"></rect></svg>Overview</a>
+<a href="#" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 12px; color: #CDB8AC; text-decoration: none;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1 12H6L5 8z"></path><path d="M9 8V6a3 3 0 0 1 6 0v2"></path></svg>Orders<span style="margin-left: auto; padding: 1px 9px; background: #A3473A; color: #FFFFFF; border-radius: 999px; font-size: 12px; font-weight: 800;">4</span></a>
+<a href="AdminProducts.dc.html" aria-current="page" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 12px; background: #3A2A22; color: #FBF6F2; text-decoration: none;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6v4H9z"></path><path d="M7 7h10l1 14H6z"></path></svg>Products</a>
+<a href="#" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 12px; color: #CDB8AC; text-decoration: none;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="9" cy="8" r="3.5"></circle><path d="M2.5 20c1-3.5 3.5-5.5 6.5-5.5s5.5 2 6.5 5.5"></path><path d="M16 4.5a3.5 3.5 0 0 1 0 7"></path><path d="M18 14.5c1.8.7 3 2.6 3.5 5.5"></path></svg>Customers</a>
+<a href="#" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 12px; color: #CDB8AC; text-decoration: none;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M20 12l-8 8-9-9V3h8z"></path><circle cx="7.5" cy="7.5" r="1.5"></circle></svg>Discounts</a>
+<a href="#" style="display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 12px; border-radius: 12px; color: #CDB8AC; text-decoration: none;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="3"></circle><path d="M12 2v3M12 19v3M4.2 4.2l2.1 2.1M17.7 17.7l2.1 2.1M2 12h3M19 12h3M4.2 19.8l2.1-2.1M17.7 6.3l2.1-2.1"></path></svg>Settings</a>
+</nav>
+<a href="Main.dc.html" style="margin-top: auto; display: flex; align-items: center; justify-content: center; min-height: 44px; border: 1px solid #5A463C; border-radius: 999px; color: #FBF6F2; text-decoration: none; font-weight: 700; font-size: 14px;">View shop</a>
+</aside>
+
+<main style="flex: 999 1 640px; min-width: 0; padding: 32px clamp(16px, 3vw, 40px) 64px; box-sizing: border-box; display: flex; flex-direction: column; gap: 24px;">
+
+<div style="display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px;">
+<div style="display: flex; flex-direction: column;">
+<h1 style="margin: 0; font-family: 'Gloock', Georgia, serif; font-weight: 400; font-size: 40px; line-height: 1.1;">Products</h1>
+<span style="color: #6E5A50;">{{total}} products in your shop</span>
+</div>
+<div style="display: flex; flex-wrap: wrap; gap: 10px;">
+<button type="button" onClick="{{toggleImport}}" style="display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 20px; cursor: pointer; font-family: inherit; font-size: 14px; font-weight: 700; color: #24150F; background: #FFFFFF; border: 1.5px solid #24150F; border-radius: 999px;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M12 15V3M7 8l5-5 5 5"></path><path d="M4 15v4a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-4"></path></svg>Import from spreadsheet</button>
+<a href="AdminAdd.dc.html" style="display: inline-flex; align-items: center; gap: 8px; min-height: 48px; padding: 0 22px; color: #FBF6F2; background: #24150F; text-decoration: none; font-size: 14px; font-weight: 700; border-radius: 999px;"><svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg>Add product</a>
+</div>
+</div>
+
+<sc-if value="{{showImport}}" hint-placeholder-val="{{ false }}">
+<section aria-labelledby="imp-h" style="background: #FFFFFF; border-radius: 20px; padding: 28px; display: flex; flex-direction: column; gap: 22px; border: 1.5px solid #24150F;">
+<div style="display: flex; justify-content: space-between; align-items: flex-start; gap: 16px;">
+<div style="display: flex; flex-direction: column; gap: 4px;">
+<h2 id="imp-h" style="margin: 0; font-size: 20px; font-weight: 800;">Add many products at once</h2>
+<span style="color: #6E5A50;">Fill in a spreadsheet, one row per product size, then upload it here.</span>
+</div>
+<button type="button" aria-label="Close import" onClick="{{toggleImport}}" style="width: 44px; height: 44px; flex: 0 0 44px; cursor: pointer; background: #F6EFEA; border: 0; border-radius: 999px; color: #24150F; font-size: 20px; font-family: inherit;">×</button>
+</div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(240px, 100%), 1fr)); gap: 16px;">
+<div style="padding: 20px; background: #FBF6F2; border-radius: 16px; display: flex; flex-direction: column; gap: 10px;">
+<span style="font-weight: 800;">1. Get the template</span>
+<span style="color: #6E5A50; font-size: 14px;">Opens in Excel or Google Sheets.</span>
+<button type="button" style="align-self: flex-start; min-height: 44px; padding: 0 18px; cursor: pointer; font-family: inherit; font-size: 14px; font-weight: 700; color: #24150F; background: #FFFFFF; border: 1.5px solid #24150F; border-radius: 999px;">Download template</button>
+</div>
+<div style="padding: 20px; background: #FBF6F2; border-radius: 16px; display: flex; flex-direction: column; gap: 10px;">
+<span style="font-weight: 800;">2. Fill in your products</span>
+<span style="color: #6E5A50; font-size: 14px;">Columns: name, category, size, price, sale price, stock, description, photo link.</span>
+</div>
+<label style="padding: 20px; border: 2px dashed #C9B3A6; border-radius: 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; text-align: center; cursor: pointer;">
+<svg aria-hidden="true" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#A3473A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"></path><path d="M14 3v5h5"></path><path d="M9 14h6M9 17h4"></path></svg>
+<span style="font-weight: 800;">3. Upload the file</span>
+<span style="color: #6E5A50; font-size: 14px;">.xlsx or .csv. You'll check everything before it goes live.</span>
+<input type="file" accept=".csv,.xlsx" style="font-family: inherit; font-size: 13px; max-width: 100%;">
+</label>
+</div>
+</section>
+</sc-if>
+
+<div style="display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 12px;">
+<div role="group" aria-label="Show" style="display: flex; flex-wrap: wrap; gap: 8px;">
+<sc-for list="{{filters}}" as="f" hint-placeholder-count="4">
+<sc-if value="{{f.on}}" hint-placeholder-val="{{ false }}">
+<button type="button" aria-pressed="true" onClick="{{f.pick}}" style="min-height: 44px; padding: 0 16px; cursor: pointer; font-family: inherit; font-size: 14px; font-weight: 700; color: #FBF6F2; background: #24150F; border: 1.5px solid #24150F; border-radius: 999px;">{{f.label}} <span style="opacity: 0.75;">{{f.count}}</span></button>
+</sc-if>
+<sc-if value="{{f.off}}" hint-placeholder-val="{{ true }}">
+<button type="button" aria-pressed="false" onClick="{{f.pick}}" style="min-height: 44px; padding: 0 16px; cursor: pointer; font-family: inherit; font-size: 14px; font-weight: 700; color: #24150F; background: #FFFFFF; border: 1.5px solid #E1D0C5; border-radius: 999px;">{{f.label}} <span style="color: #6E5A50;">{{f.count}}</span></button>
+</sc-if>
+</sc-for>
+</div>
+<label style="flex: 0 1 320px; display: flex; align-items: center; gap: 10px; min-height: 46px; padding: 0 16px; background: #FFFFFF; border: 1.5px solid #E1D0C5; border-radius: 999px;">
+<svg aria-hidden="true" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#6E5A50" stroke-width="1.8" stroke-linecap="round"><circle cx="11" cy="11" r="7"></circle><path d="M20 20l-3.5-3.5"></path></svg>
+<span style="position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0);">Search products</span>
+<input type="search" placeholder="Search products" style="flex: 1; min-width: 0; border: 0; outline-offset: 4px; background: transparent; font-family: inherit; font-size: 15px; color: #24150F;">
+</label>
+</div>
+
+<div style="background: #FFFFFF; border-radius: 20px; overflow-x: auto;">
+<table style="width: 100%; min-width: 760px; border-collapse: collapse;">
+<thead>
+<tr style="text-align: left; font-size: 13px; color: #6E5A50;">
+<th scope="col" style="padding: 16px 20px; font-weight: 700;">Product</th>
+<th scope="col" style="padding: 16px 12px; font-weight: 700;">Category</th>
+<th scope="col" style="padding: 16px 12px; font-weight: 700;">Price</th>
+<th scope="col" style="padding: 16px 12px; font-weight: 700;">Stock</th>
+<th scope="col" style="padding: 16px 12px; font-weight: 700;">Status</th>
+<th scope="col" style="padding: 16px 20px; font-weight: 700; text-align: right;">Action</th>
+</tr>
+</thead>
+<tbody>
+<sc-for list="{{rows}}" as="r" hint-placeholder-count="8">
+<tr style="border-top: 1px solid #F0E4DC;">
+<td style="padding: 14px 20px;"><div style="display: flex; align-items: center; gap: 14px;"><div aria-hidden="true" style="width: 48px; height: 56px; flex: 0 0 48px; border-radius: 10px; background: {{r.tint}};"></div><div style="display: flex; flex-direction: column;"><span style="font-weight: 700;">{{r.name}}</span><span style="font-size: 13px; color: #6E5A50;">{{r.sizes}}</span></div></div></td>
+<td style="padding: 14px 12px; color: #5E4A40;">{{r.cat}}</td>
+<td style="padding: 14px 12px; font-weight: 700; white-space: nowrap;">{{r.price}}</td>
+<td style="padding: 14px 12px;">
+<sc-if value="{{r.low}}" hint-placeholder-val="{{ false }}"><span style="font-weight: 800; color: #A3473A;">{{r.stock}} left</span></sc-if>
+<sc-if value="{{r.ok}}" hint-placeholder-val="{{ true }}"><span>{{r.stock}}</span></sc-if>
+</td>
+<td style="padding: 14px 12px;">
+<sc-if value="{{r.isLive}}" hint-placeholder-val="{{ true }}"><span style="display: inline-flex; padding: 4px 12px; border-radius: 999px; background: #E2EEDF; color: #2F5A36; font-size: 13px; font-weight: 800;">Live</span></sc-if>
+<sc-if value="{{r.isDraft}}" hint-placeholder-val="{{ false }}"><span style="display: inline-flex; padding: 4px 12px; border-radius: 999px; background: #EFE7E1; color: #5E4A40; font-size: 13px; font-weight: 800;">Draft</span></sc-if>
+<sc-if value="{{r.isOut}}" hint-placeholder-val="{{ false }}"><span style="display: inline-flex; padding: 4px 12px; border-radius: 999px; background: #F6DDD7; color: #8A2F23; font-size: 13px; font-weight: 800;">Sold out</span></sc-if>
+</td>
+<td style="padding: 14px 20px; text-align: right;"><a href="AdminAdd.dc.html" aria-label="Edit {{r.name}}" style="display: inline-flex; align-items: center; min-height: 40px; padding: 0 16px; border: 1.5px solid #E1D0C5; border-radius: 999px; color: #24150F; text-decoration: none; font-weight: 700; font-size: 14px;">Edit</a></td>
+</tr>
+</sc-for>
+</tbody>
+</table>
+</div>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1100}}'>
+class Component extends DCLogic {
+constructor(props) {
+super(props);
+this.state = { filter: 'All', showImport: false };
+}
+renderVals() {
+var self = this;
+var data = [
+{ name: 'Oud Noir', cat: 'Perfume', sizes: '50ml, 100ml', price: 'GH₵ 520 to 850', stock: 14, status: 'live', tint: '#E9CDBF' },
+{ name: 'Shea and Vanilla', cat: 'Body butter', sizes: '250ml', price: 'GH₵ 180', stock: 3, status: 'live', tint: '#EFE3D0' },
+{ name: 'Velvet Rose', cat: 'Perfume', sizes: '50ml', price: 'GH₵ 620', stock: 9, status: 'live', tint: '#EADBE3' },
+{ name: 'Cocoa Glow', cat: 'Body oil', sizes: '100ml', price: 'GH₵ 220', stock: 21, status: 'live', tint: '#E4E6D9' },
+{ name: 'Amber Musk', cat: 'Body mist', sizes: '200ml', price: 'GH₵ 150', stock: 0, status: 'out', tint: '#F3DCD3' },
+{ name: 'Night Jasmine', cat: 'Perfume', sizes: '100ml', price: 'GH₵ 700', stock: 2, status: 'live', tint: '#E4E6D9' },
+{ name: 'Coconut Milk', cat: 'Body lotion', sizes: '400ml', price: 'GH₵ 140', stock: 30, status: 'live', tint: '#EADBE3' },
+{ name: 'December Gift Box', cat: 'Gift set', sizes: 'One size', price: 'GH₵ 950', stock: 12, status: 'draft', tint: '#EFE3D0' }
+];
+var tests = {
+'All': function () { return true; },
+'Live': function (p) { return p.status === 'live'; },
+'Drafts': function (p) { return p.status === 'draft'; },
+'Low stock': function (p) { return p.stock <= 3; }
+};
+var filters = Object.keys(tests).map(function (k) {
+return { label: k, count: data.filter(tests[k]).length, on: self.state.filter === k, off: self.state.filter !== k, pick: function () { self.setState({ filter: k }); } };
+});
+var rows = data.filter(tests[self.state.filter]).map(function (p) {
+return { name: p.name, cat: p.cat, sizes: p.sizes, price: p.price, stock: p.stock, tint: p.tint, low: p.stock <= 3, ok: p.stock > 3, isLive: p.status === 'live', isDraft: p.status === 'draft', isOut: p.status === 'out' };
+});
+return {
+total: data.length, filters: filters, rows: rows, showImport: this.state.showImport,
+toggleImport: function () { self.setState({ showImport: !self.state.showImport }); }
+};
+}
+}
+</script>
+</body>
+</html>

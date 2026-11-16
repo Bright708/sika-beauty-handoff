@@ -1,0 +1,139 @@
+@import "tailwindcss";
+
+/*
+  Tailwind v4: design tokens live here in @theme (there is no tailwind.config.js).
+  Every colour from DESIGN.md becomes a utility, e.g. bg-paper, text-ink, border-line, text-rose.
+*/
+@theme {
+  /* Reset Tailwind's default palette so only our tokens exist (one accent, no stray colours). */
+  --color-*: initial;
+
+  --color-transparent: transparent;
+  --color-current: currentColor;
+
+  /* Core tokens (DESIGN.md "Colour tokens") */
+  --color-paper: #FBF6F2;
+  --color-shell: #F6EFEA;
+  --color-white: #FFFFFF;
+  --color-ink: #24150F;
+  --color-ink-2: #3A2A22;
+  --color-muted: #6E5A50;
+  --color-muted-2: #5E4A40;
+  --color-line: #E6D6CC;
+  --color-field: #E1D0C5;
+  --color-rose: #A3473A;
+  --color-rose-light: #E7B9A9;
+  --color-blush: #F3DCD3;
+
+  /* Product tints (rotate behind photos) */
+  --color-peach: #E9CDBF;
+  --color-sand: #EFE3D0;
+  --color-sage: #E4E6D9;
+  --color-lilac: #EADBE3;
+
+  /* Status pills */
+  --color-success: #2F5A36;
+  --color-success-bg: #E2EEDF;
+  --color-danger: #8A2F23;
+  --color-danger-bg: #F6DDD7;
+  --color-neutral: #5E4A40;
+  --color-neutral-bg: #EFE7E1;
+
+  /* Supporting shades used in the approved mockups */
+  --color-chip-line: #D9C5B9;   /* inactive filter chip border */
+  --color-strike: #7C665C;      /* struck-through old price */
+  --color-placeholder: #6E5248; /* "Product photo" placeholder label */
+  --color-on-ink-muted: #CDB8AC;/* secondary text on ink (footer, gift panel) */
+  --color-on-sage: #4E4A3E;     /* body text on the sage promo panel */
+  --color-line-soft: #F0E4DC;   /* admin table row dividers */
+  --color-dash: #C9B3A6;        /* dashed upload drop zones */
+  --color-on-ink-line: #5A463C; /* outline button on the ink sidebar */
+  --color-danger-line: #F0D3CC; /* "Remove" outline in admin forms */
+
+  /* Fonts */
+  --font-display: "Gloock", Georgia, serif;
+  --font-sans: "Manrope", "Helvetica Neue", Arial, sans-serif;
+
+  /* Radii */
+  --radius-panel: 28px;
+  --radius-card: 22px;
+  --radius-admin: 20px;
+  --radius-tile: 16px;
+  --radius-input: 12px;
+
+  /* The single allowed shadow (floating elements only) */
+  --shadow-float: 0 12px 32px rgba(36, 21, 15, 0.12);
+
+  /* Breakpoint used for the full desktop nav */
+  --breakpoint-nav: 1024px;
+}
+
+@layer base {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+  body {
+    @apply bg-paper text-ink font-sans;
+    font-size: 16px;
+    line-height: 1.55;
+    -webkit-font-smoothing: antialiased;
+  }
+  /* Visible focus: 2px rose outline everywhere */
+  :focus-visible {
+    outline: 2px solid var(--color-rose);
+    outline-offset: 2px;
+  }
+  /* 16px in inputs stops iPhone zooming in */
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+}
+
+@utility container-shop {
+  width: 100%;
+  max-width: 1320px;
+  margin-inline: auto;
+  padding-inline: clamp(16px, 4vw, 40px);
+}
+
+@utility text-hero {
+  font-size: clamp(48px, 6vw, 88px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+}
+
+@utility text-section {
+  font-size: clamp(36px, 4vw, 56px);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+}
+
+/* Bag drawer: slide in from the right; page behind does not scroll while a dialog is open */
+dialog.bag-drawer[open] {
+  animation: bag-in 220ms ease-out;
+}
+@keyframes bag-in {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: none;
+  }
+}
+html:has(dialog[open]) {
+  overflow: hidden;
+}
+@media (prefers-reduced-motion: reduce) {
+  dialog.bag-drawer[open] {
+    animation: none;
+  }
+}
+
+/* Breadcrumb links: 44px tap area without changing the line height */
+nav[aria-label='Breadcrumb'] a {
+  display: inline-block;
+  padding-block: 11px;
+  margin-block: -11px;
+}

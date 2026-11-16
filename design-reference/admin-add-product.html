@@ -1,0 +1,194 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Sika admin, add product</title>
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Gloock&amp;family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+body{margin:0}
+input::placeholder,textarea::placeholder{color:#8A746A}
+</style>
+</helmet>
+<div style="font-family: 'Manrope', 'Helvetica Neue', Arial, sans-serif; background: #F6EFEA; color: #24150F; font-size: 15px; line-height: 1.5; min-height: 1700px; display: flex; flex-wrap: wrap;">
+
+<aside style="flex: 1 1 240px; max-width: 280px; background: #24150F; color: #FBF6F2; padding: 28px 20px; box-sizing: border-box; display: flex; flex-direction: column; gap: 32px;">
+<div style="display: flex; align-items: baseline; gap: 10px; padding: 0 12px;"><span style="font-family: 'Gloock', Georgia, serif; font-size: 30px;">Sika<span style="color: #E7B9A9;">.</span></span><span style="font-size: 12px; font-weight: 700; color: #CDB8AC;">Admin</span></div>
+<nav aria-label="Admin" style="display: flex; flex-direction: column; gap: 4px; font-weight: 600;">
+<a href="#" style="display: flex; align-items: center; min-height: 44px; padding: 0 12px; border-radius: 12px; color: #CDB8AC; text-decoration: none;">Overview</a>
+<a href="#" style="display: flex; align-items: center; min-height: 44px; padding: 0 12px; border-radius: 12px; color: #CDB8AC; text-decoration: none;">Orders<span style="margin-left: auto; padding: 1px 9px; background: #A3473A; color: #FFFFFF; border-radius: 999px; font-size: 12px; font-weight: 800;">4</span></a>
+<a href="AdminProducts.dc.html" aria-current="page" style="display: flex; align-items: center; min-height: 44px; padding: 0 12px; border-radius: 12px; background: #3A2A22; color: #FBF6F2; text-decoration: none;">Products</a>
+<a href="#" style="display: flex; align-items: center; min-height: 44px; padding: 0 12px; border-radius: 12px; color: #CDB8AC; text-decoration: none;">Customers</a>
+<a href="#" style="display: flex; align-items: center; min-height: 44px; padding: 0 12px; border-radius: 12px; color: #CDB8AC; text-decoration: none;">Discounts</a>
+<a href="#" style="display: flex; align-items: center; min-height: 44px; padding: 0 12px; border-radius: 12px; color: #CDB8AC; text-decoration: none;">Settings</a>
+</nav>
+<a href="Main.dc.html" style="margin-top: auto; display: flex; align-items: center; justify-content: center; min-height: 44px; border: 1px solid #5A463C; border-radius: 999px; color: #FBF6F2; text-decoration: none; font-weight: 700; font-size: 14px;">View shop</a>
+</aside>
+
+<main style="flex: 999 1 640px; min-width: 0; padding: 32px clamp(16px, 3vw, 40px) 64px; box-sizing: border-box; display: flex; flex-direction: column; gap: 24px;">
+
+<div style="display: flex; flex-direction: column; gap: 6px;">
+<nav aria-label="Breadcrumb" style="display: flex; gap: 8px; font-size: 14px; color: #6E5A50;"><a href="AdminProducts.dc.html" style="color: #6E5A50;">Products</a><span aria-hidden="true">/</span><span>Add product</span></nav>
+<h1 style="margin: 0; font-family: 'Gloock', Georgia, serif; font-weight: 400; font-size: 40px; line-height: 1.1;">Add a product</h1>
+</div>
+
+<div style="display: flex; flex-wrap: wrap; gap: 24px; align-items: flex-start;">
+
+<div style="flex: 999 1 520px; min-width: 0; display: flex; flex-direction: column; gap: 20px;">
+
+<section aria-labelledby="ph-h" style="background: #FFFFFF; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 16px;">
+<div style="display: flex; flex-direction: column;"><h2 id="ph-h" style="margin: 0; font-size: 18px; font-weight: 800;">Photos</h2><span style="font-size: 14px; color: #6E5A50;">The first photo is the one shoppers see first. Square photos look best.</span></div>
+<div style="display: grid; grid-template-columns: repeat(auto-fill, minmax(120px, 1fr)); gap: 12px;">
+<label style="grid-column: span 2; min-height: 200px; border: 2px dashed #C9B3A6; border-radius: 16px; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px; text-align: center; padding: 16px; cursor: pointer; background: #FBF6F2;">
+<svg aria-hidden="true" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="#A3473A" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2.5"></rect><circle cx="9" cy="10" r="1.8"></circle><path d="M21 16l-5-5-8 8"></path></svg>
+<span style="font-weight: 800;">Add photos</span>
+<span style="font-size: 13px; color: #6E5A50;">Take a picture or choose from your phone</span>
+<input type="file" accept="image/*" multiple style="font-family: inherit; font-size: 12px; max-width: 100%;">
+</label>
+<div role="img" aria-label="Uploaded photo 1, cover" style="position: relative; aspect-ratio: 1 / 1; border-radius: 16px; background: #E9CDBF;"><span style="position: absolute; left: 8px; bottom: 8px; padding: 3px 10px; background: #24150F; color: #FBF6F2; border-radius: 999px; font-size: 11px; font-weight: 800;">Cover</span></div>
+<div role="img" aria-label="Uploaded photo 2" style="aspect-ratio: 1 / 1; border-radius: 16px; background: #EFE3D0;"></div>
+</div>
+</section>
+
+<section aria-labelledby="ba-h" style="background: #FFFFFF; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 18px;">
+<h2 id="ba-h" style="margin: 0; font-size: 18px; font-weight: 800;">About the product</h2>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 700;">Product name
+<input type="text" value="{{name}}" onInput="{{setName}}" placeholder="e.g. Oud Noir" style="min-height: 50px; padding: 0 16px; font-family: inherit; font-size: 16px; color: #24150F; background: #FBF6F2; border: 1.5px solid #E1D0C5; border-radius: 12px;"></label>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(220px, 100%), 1fr)); gap: 16px;">
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 700;">Category
+<select value="{{cat}}" onChange="{{setCat}}" style="min-height: 50px; padding: 0 14px; font-family: inherit; font-size: 16px; color: #24150F; background: #FBF6F2; border: 1.5px solid #E1D0C5; border-radius: 12px;">
+<option value="Perfume">Perfume</option>
+<option value="Body cream">Body cream</option>
+<option value="Body butter">Body butter</option>
+<option value="Body oil">Body oil</option>
+<option value="Body mist">Body mist</option>
+<option value="Gift set">Gift set</option>
+</select></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 700;">Brand <span style="font-weight: 500; color: #6E5A50;">(optional)</span>
+<input type="text" placeholder="e.g. Lattafa" style="min-height: 50px; padding: 0 16px; font-family: inherit; font-size: 16px; color: #24150F; background: #FBF6F2; border: 1.5px solid #E1D0C5; border-radius: 12px;"></label>
+</div>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 14px; font-weight: 700;">Short description
+<textarea rows="3" placeholder="What does it smell or feel like? Who is it for?" style="padding: 14px 16px; font-family: inherit; font-size: 16px; color: #24150F; background: #FBF6F2; border: 1.5px solid #E1D0C5; border-radius: 12px; resize: vertical;"></textarea></label>
+</section>
+
+<section aria-labelledby="sz-h" style="background: #FFFFFF; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 16px;">
+<div style="display: flex; flex-direction: column;"><h2 id="sz-h" style="margin: 0; font-size: 18px; font-weight: 800;">Sizes, prices and stock</h2><span style="font-size: 14px; color: #6E5A50;">One row per size. Leave sale price empty if it's not on sale.</span></div>
+<sc-for list="{{sizes}}" as="s" hint-placeholder-count="1">
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 12px; align-items: end; padding-bottom: 16px; border-bottom: 1px solid #F0E4DC;">
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 700;">Size
+<input type="text" value="{{s.size}}" onInput="{{s.setSize}}" placeholder="50ml" style="min-height: 48px; padding: 0 14px; font-family: inherit; font-size: 16px; color: #24150F; background: #FBF6F2; border: 1.5px solid #E1D0C5; border-radius: 12px;"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 700;">Price (GH₵)
+<input type="number" inputmode="decimal" value="{{s.price}}" onInput="{{s.setPrice}}" placeholder="520" style="min-height: 48px; padding: 0 14px; font-family: inherit; font-size: 16px; color: #24150F; background: #FBF6F2; border: 1.5px solid #E1D0C5; border-radius: 12px;"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 700;">Sale price
+<input type="number" inputmode="decimal" value="{{s.sale}}" onInput="{{s.setSale}}" placeholder="Optional" style="min-height: 48px; padding: 0 14px; font-family: inherit; font-size: 16px; color: #24150F; background: #FBF6F2; border: 1.5px solid #E1D0C5; border-radius: 12px;"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 700;">In stock
+<input type="number" inputmode="numeric" value="{{s.stock}}" onInput="{{s.setStock}}" placeholder="10" style="min-height: 48px; padding: 0 14px; font-family: inherit; font-size: 16px; color: #24150F; background: #FBF6F2; border: 1.5px solid #E1D0C5; border-radius: 12px;"></label>
+<sc-if value="{{s.canRemove}}" hint-placeholder-val="{{ false }}">
+<button type="button" onClick="{{s.remove}}" aria-label="Remove this size" style="min-height: 48px; cursor: pointer; font-family: inherit; font-size: 14px; font-weight: 700; color: #8A2F23; background: transparent; border: 1.5px solid #F0D3CC; border-radius: 12px;">Remove</button>
+</sc-if>
+</div>
+</sc-for>
+<button type="button" onClick="{{addSize}}" style="align-self: flex-start; display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 18px; cursor: pointer; font-family: inherit; font-size: 14px; font-weight: 700; color: #24150F; background: #FBF6F2; border: 1.5px solid #E1D0C5; border-radius: 999px;"><svg aria-hidden="true" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M12 5v14M5 12h14"></path></svg>Add another size</button>
+</section>
+
+<sc-if value="{{isPerfume}}" hint-placeholder-val="{{ true }}">
+<section aria-labelledby="sn-h" style="background: #FFFFFF; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 16px;">
+<div style="display: flex; flex-direction: column;"><h2 id="sn-h" style="margin: 0; font-size: 18px; font-weight: 800;">Scent notes</h2><span style="font-size: 14px; color: #6E5A50;">Only for perfumes. Separate with commas.</span></div>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(min(200px, 100%), 1fr)); gap: 12px;">
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 700;">Top<input type="text" placeholder="bergamot, saffron" style="min-height: 48px; padding: 0 14px; font-family: inherit; font-size: 16px; color: #24150F; background: #FBF6F2; border: 1.5px solid #E1D0C5; border-radius: 12px;"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 700;">Heart<input type="text" placeholder="rose, oud" style="min-height: 48px; padding: 0 14px; font-family: inherit; font-size: 16px; color: #24150F; background: #FBF6F2; border: 1.5px solid #E1D0C5; border-radius: 12px;"></label>
+<label style="display: flex; flex-direction: column; gap: 6px; font-size: 13px; font-weight: 700;">Base<input type="text" placeholder="amber, vanilla, musk" style="min-height: 48px; padding: 0 14px; font-family: inherit; font-size: 16px; color: #24150F; background: #FBF6F2; border: 1.5px solid #E1D0C5; border-radius: 12px;"></label>
+</div>
+</section>
+</sc-if>
+</div>
+
+<div style="flex: 1 1 320px; min-width: 0; display: flex; flex-direction: column; gap: 20px;">
+<section aria-labelledby="st-h" style="background: #FFFFFF; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 14px;">
+<h2 id="st-h" style="margin: 0; font-size: 18px; font-weight: 800;">Visibility</h2>
+<div role="group" aria-label="Visibility" style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px;">
+<sc-if value="{{live}}" hint-placeholder-val="{{ true }}">
+<button type="button" aria-pressed="true" style="min-height: 48px; cursor: pointer; font-family: inherit; font-weight: 800; color: #FBF6F2; background: #24150F; border: 1.5px solid #24150F; border-radius: 12px;">Live in shop</button>
+<button type="button" aria-pressed="false" onClick="{{setDraft}}" style="min-height: 48px; cursor: pointer; font-family: inherit; font-weight: 700; color: #24150F; background: #FBF6F2; border: 1.5px solid #E1D0C5; border-radius: 12px;">Hidden draft</button>
+</sc-if>
+<sc-if value="{{draft}}" hint-placeholder-val="{{ false }}">
+<button type="button" aria-pressed="false" onClick="{{setLive}}" style="min-height: 48px; cursor: pointer; font-family: inherit; font-weight: 700; color: #24150F; background: #FBF6F2; border: 1.5px solid #E1D0C5; border-radius: 12px;">Live in shop</button>
+<button type="button" aria-pressed="true" style="min-height: 48px; cursor: pointer; font-family: inherit; font-weight: 800; color: #FBF6F2; background: #24150F; border: 1.5px solid #24150F; border-radius: 12px;">Hidden draft</button>
+</sc-if>
+</div>
+<button type="button" onClick="{{save}}" style="min-height: 54px; cursor: pointer; font-family: inherit; font-size: 16px; font-weight: 800; color: #FFFFFF; background: #A3473A; border: 0; border-radius: 999px;">{{saveLabel}}</button>
+<sc-if value="{{saved}}" hint-placeholder-val="{{ false }}">
+<p role="status" style="margin: 0; padding: 12px 14px; background: #E2EEDF; color: #2F5A36; border-radius: 12px; font-weight: 700; font-size: 14px;">{{savedMsg}}</p>
+</sc-if>
+</section>
+
+<section aria-labelledby="pv-h" style="background: #FFFFFF; border-radius: 20px; padding: 24px; display: flex; flex-direction: column; gap: 14px;">
+<h2 id="pv-h" style="margin: 0; font-size: 18px; font-weight: 800;">How it looks in the shop</h2>
+<div style="display: flex; flex-direction: column; gap: 12px; max-width: 280px;">
+<div role="img" aria-label="Cover photo preview" style="position: relative; aspect-ratio: 4 / 5; border-radius: 20px; background: #E9CDBF;">
+<sc-if value="{{onSale}}" hint-placeholder-val="{{ false }}"><span style="position: absolute; top: 12px; left: 12px; padding: 5px 11px; background: #A3473A; color: #FFFFFF; font-size: 12px; font-weight: 800; border-radius: 999px;">Sale</span></sc-if>
+</div>
+<div style="display: flex; flex-direction: column; gap: 2px;">
+<span style="font-size: 13px; font-weight: 600; color: #6E5A50;">{{cat}}</span>
+<span style="font-weight: 700; font-size: 17px;">{{previewName}}</span>
+<div style="display: flex; align-items: baseline; gap: 10px;"><span style="font-weight: 800; font-size: 17px;">{{previewPrice}}</span><sc-if value="{{onSale}}" hint-placeholder-val="{{ false }}"><s style="font-size: 14px; color: #8A746A;">{{previewWas}}</s></sc-if></div>
+</div>
+</div>
+</section>
+</div>
+
+</div>
+</main>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":1440,"height":1700}}'>
+class Component extends DCLogic {
+constructor(props) {
+super(props);
+this.state = { name: 'Oud Noir', cat: 'Perfume', status: 'live', saved: false, sizes: [{ size: '50ml', price: '520', sale: '', stock: '6' }, { size: '100ml', price: '1050', sale: '850', stock: '8' }] };
+}
+renderVals() {
+var self = this;
+var s = this.state;
+var fmt = function (v) { var n = parseFloat(v); return isNaN(n) ? 'GH₵ -' : 'GH₵ ' + n.toLocaleString('en-US'); };
+var updateSize = function (i, key, val) {
+var next = s.sizes.map(function (x, j) { if (j !== i) return x; var c = Object.assign({}, x); c[key] = val; return c; });
+self.setState({ sizes: next, saved: false });
+};
+var sizes = s.sizes.map(function (x, i) {
+return {
+size: x.size, price: x.price, sale: x.sale, stock: x.stock, canRemove: s.sizes.length > 1,
+setSize: function (e) { updateSize(i, 'size', e.target.value); },
+setPrice: function (e) { updateSize(i, 'price', e.target.value); },
+setSale: function (e) { updateSize(i, 'sale', e.target.value); },
+setStock: function (e) { updateSize(i, 'stock', e.target.value); },
+remove: function () { self.setState({ sizes: s.sizes.filter(function (_, j) { return j !== i; }), saved: false }); }
+};
+});
+var first = s.sizes[0] || { price: '', sale: '' };
+var onSale = first.sale !== '' && !isNaN(parseFloat(first.sale));
+var live = s.status === 'live';
+return {
+name: s.name, cat: s.cat, sizes: sizes, isPerfume: s.cat === 'Perfume',
+previewName: s.name ? s.name : 'Product name',
+previewPrice: onSale ? fmt(first.sale) : fmt(first.price), previewWas: fmt(first.price), onSale: onSale,
+live: live, draft: !live,
+saveLabel: live ? 'Publish product' : 'Save draft',
+saved: s.saved, savedMsg: live ? 'Published. It is now in your shop.' : 'Saved as a draft. Shoppers cannot see it yet.',
+setName: function (e) { self.setState({ name: e.target.value, saved: false }); },
+setCat: function (e) { self.setState({ cat: e.target.value, saved: false }); },
+addSize: function () { self.setState({ sizes: s.sizes.concat([{ size: '', price: '', sale: '', stock: '' }]), saved: false }); },
+setLive: function () { self.setState({ status: 'live', saved: false }); },
+setDraft: function () { self.setState({ status: 'draft', saved: false }); },
+save: function () { self.setState({ saved: true }); }
+};
+}
+}
+</script>
+</body>
+</html>
