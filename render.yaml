@@ -4,6 +4,11 @@ services:
   - type: web
     name: sika-api
     runtime: node
+    # Free while testing (sleeps after 15 min idle). Before launch switch to a paid plan
+    # in the Render dashboard, or change this to 0.5c-512mb.
+    plan: free
+    # Closest Render region to Accra. Cannot be changed after the service is created.
+    region: frankfurt
     rootDir: server
     buildCommand: npm ci --omit=dev
     startCommand: npm start
